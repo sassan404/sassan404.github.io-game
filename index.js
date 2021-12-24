@@ -33,11 +33,11 @@ window.onload = function(){
         evtCoordinates = evt.x;
         window.addEventListener('touchmove', handleEvent);
     })    
-    window.addEventListener('touchend', function(){
-        evt.preventDefault();
-        evtCoordinates = null;
-        window.removeEventListener('touchmove', handleEvent);
-    });
+    // window.addEventListener('touchend', function(){
+    //     evt.preventDefault();
+    //     evtCoordinates = null;
+    //     window.removeEventListener('touchmove', handleEvent);
+    // });
 
 
     document.addEventListener('keydown', function(e) {
