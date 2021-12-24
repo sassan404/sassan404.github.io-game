@@ -16,6 +16,7 @@ window.onload = function(){
     playerPosition.left = screenWidth/2-10 + 'px';
 
     function handleEvent(evt){
+        e.preventDefault()
         evtCoordinates = evt.x;
     }
 
@@ -28,10 +29,12 @@ window.onload = function(){
     });
 
     window.addEventListener('touchstart', function(evt){
+        e.preventDefault()
         evtCoordinates = evt.x;
         window.addEventListener('touchmove', handleEvent);
     })    
     window.addEventListener('touchend', function(){
+        e.preventDefault()
         window.removeEventListener('touchmove', handleEvent);
     });
 
