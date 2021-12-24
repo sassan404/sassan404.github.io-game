@@ -34,7 +34,8 @@ window.onload = function(){
         window.addEventListener('touchmove', handleEvent);
     })    
     window.addEventListener('touchend', function(){
-        evt.preventDefault()
+        evt.preventDefault();
+        evtCoordinates = null;
         window.removeEventListener('touchmove', handleEvent);
     });
 
@@ -58,7 +59,7 @@ window.onload = function(){
 
             if(evtCoordinates){
                 movePlayer(playerPosition, evtCoordinates, player, container);
-                evtCoordinates = null;
+                // evtCoordinates = null;
             }
             let ball = document.querySelector('#ball').getBoundingClientRect();
 
