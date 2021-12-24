@@ -25,20 +25,21 @@ window.onload = function(){
         evtCoordinates = evt.x;
         window.addEventListener('mousemove', handleEvent);
     })    
-    // window.addEventListener('mouseup', function(){
-    //     window.removeEventListener('mousemove', handleEvent);
-    // });
+    window.addEventListener('mouseup', function(){
+        evt.preventDefault()
+        window.removeEventListener('mousemove', handleEvent);
+    });
 
     window.addEventListener('touchstart', function(evt){
         evt.preventDefault()
         evtCoordinates = evt.x;
         window.addEventListener('touchmove', handleEvent);
     })    
-    // window.addEventListener('touchend', function(){
-    //     evt.preventDefault();
-    //     evtCoordinates = null;
-    //     window.removeEventListener('touchmove', handleEvent);
-    // });
+    window.addEventListener('touchend', function(){
+        evt.preventDefault();
+        evtCoordinates = null;
+        window.removeEventListener('touchmove', handleEvent);
+    });
 
 
     document.addEventListener('keydown', function(e) {
