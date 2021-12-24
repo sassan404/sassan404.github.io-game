@@ -21,12 +21,13 @@ window.onload = function(){
     }
 
     window.addEventListener('mousedown', function(evt){
+        evt.preventDefault()
         evtCoordinates = evt.x;
         window.addEventListener('mousemove', handleEvent);
     })    
-    window.addEventListener('mouseup', function(){
-        window.removeEventListener('mousemove', handleEvent);
-    });
+    // window.addEventListener('mouseup', function(){
+    //     window.removeEventListener('mousemove', handleEvent);
+    // });
 
     window.addEventListener('touchstart', function(evt){
         evt.preventDefault()
